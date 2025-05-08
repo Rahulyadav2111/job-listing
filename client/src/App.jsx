@@ -26,7 +26,7 @@ function App() {
         page: currentPage,
         limit: 10,
       }).toString();
-      const response = await fetch(`http://localhost:5000/api/jobs?${query}`);
+      const response = await fetch(`https://job-listing-wzvs.onrender.com/api/jobs?${query}`);
       const data = await response.json();
       setJobs(data.jobs);
       setTotalPages(data.totalPages);
